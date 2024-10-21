@@ -7,18 +7,24 @@ const categorySchema = new Schema({
     },
     image :{
         type:String,
+        required:true,
+    },
+    imagePublicId :{
+        type:String,
+        required:true,
     },
     status :{
         type:String,
         enum:['active ','not_active'],
+        default:'not_active',
     },
     createdBy :{
-        type:Types.objectId,
+        type:Types.ObjectId,
         required:true,
         ref:'User',
     },
     updatedBy :{
-        type:Types.objectId,
+        type:Types.ObjectId,
         required:true,
         ref:'User',
     }

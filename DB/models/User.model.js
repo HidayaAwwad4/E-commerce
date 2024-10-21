@@ -15,6 +15,7 @@ const userSchema = new Schema({
     },
     image :{
         type:String,
+        default:'',
     },
     phone :{
         type:String,
@@ -37,6 +38,7 @@ const userSchema = new Schema({
     role  :{
         type:String,
         enum:['user','admin'],
+        default:'user',
     }
 },{
     timestamps:true,
